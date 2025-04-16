@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - FootyPredict</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #1e2a78;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    .mobile-nav {
+      display: none;
+      position: relative;
+    }
+    #menu-toggle {
+      background: #1e2a78;
+      color: white;
+      font-size: 24px;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+    }
+    #mobile-menu {
+      display: none;
+      flex-direction: column;
+      background: #1e2a78;
+      position: absolute;
+      top: 3rem;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+    #mobile-menu a {
+      color: white;
+      padding: 1rem;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+    #mobile-menu a:hover {
+      background: #2e3b90;
+    }
+    @media screen and (max-width: 768px) {
+      .mobile-nav {
+        display: block;
+      }
+      .desktop-nav {
+        display: none;
+      }
+    }
+    .desktop-nav {
+      display: flex;
+      justify-content: center;
+      background: #1e2a78;
+    }
+    .desktop-nav a {
+      color: white;
+      padding: 1rem;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .desktop-nav a:hover {
+      background-color: #2e3b90;
+    }
+    main {
+      padding: 2rem;
+    }
+    .about-section {
+      background: white;
+      padding: 2rem;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #1e2a78;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>FootyPredict</h1>
+    <div class="mobile-nav">
+      <button id="menu-toggle">&#9776;</button>
+      <div id="mobile-menu">
+        <a href="index.html">Home</a>
+        <a href="predictions.html">Predictions</a>
+        <a href="results.html">Results</a>
+        <a href="news.html">News</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <nav class="desktop-nav">
+      <a href="index.html">Home</a>
+      <a href="predictions.html">Predictions</a>
+      <a href="results.html">Results</a>
+      <a href="news.html">News</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section class="about-section">
+      <h2>About FootyPredict</h2>
+      <p>Welcome to FootyPredict, the premier website for football predictions, match results, and football news!</p>
+      <p>Our goal is to bring football fans the most accurate predictions and up-to-date results for matches in the top leagues around the world. Whether you're looking for the next big match prediction or just want to see how your favorite teams are performing, we've got you covered.</p>
+      <h3>Our Mission</h3>
+      <p>At FootyPredict, our mission is to provide football fans with high-quality predictions backed by statistical analysis, expert opinions, and up-to-date results to help make better-informed betting decisions or just keep up with their favorite teams. And the best part? Our predictions are completely free!</p>
+      <h3>Why Choose FootyPredict?</h3>
+      <ul>
+        <li><strong>Accurate Predictions:</strong> Our predictions are based on a deep understanding of the game, historical data, and team performance.</li>
+        <li><strong>Reliable Results:</strong> Get up-to-date match results for all major football leagues and competitions.</li>
+        <li><strong>Comprehensive Coverage:</strong> We cover matches across Europe, South America, and other key regions.</li>
+        <li><strong>User-Friendly Interface:</strong> FootyPredict is easy to use and designed with you in mind, offering quick navigation and clean design.</li>
+        <li><strong>Free Predictions:</strong> All our predictions are free, giving you the best value without spending a dime!</li>
+      </ul>
+      <p>Thank you for visiting FootyPredict. Stay tuned for more exciting predictions, results, and football news!</p>
+    </section>
+  </main>
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+    toggleBtn.addEventListener('click', () => {
+      menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    });
+  </script>
+</body>
+</html>

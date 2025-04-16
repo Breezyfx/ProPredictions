@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Predictions - FootyPredict</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #1e2a78;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    .mobile-nav {
+      display: none;
+      position: relative;
+    }
+    #menu-toggle {
+      background: #1e2a78;
+      color: white;
+      font-size: 24px;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+    }
+    #mobile-menu {
+      display: none;
+      flex-direction: column;
+      background: #1e2a78;
+      position: absolute;
+      top: 3rem;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+    #mobile-menu a {
+      color: white;
+      padding: 1rem;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+    #mobile-menu a:hover {
+      background: #2e3b90;
+    }
+    @media screen and (max-width: 768px) {
+      .mobile-nav {
+        display: block;
+      }
+      .desktop-nav {
+        display: none;
+      }
+    }
+    .desktop-nav {
+      display: flex;
+      justify-content: center;
+      background: #1e2a78;
+    }
+    .desktop-nav a {
+      color: white;
+      padding: 1rem;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .desktop-nav a:hover {
+      background-color: #2e3b90;
+    }
+    main {
+      padding: 1rem;
+    }
+    .game {
+      background: white;
+      margin: 1rem 0;
+      padding: 1rem;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>FootyPredict</h1>
+    <div class="mobile-nav">
+      <button id="menu-toggle">&#9776;</button>
+      <div id="mobile-menu">
+        <a href="index.html">Home</a>
+        <a href="predictions.html">Predictions</a>
+        <a href="results.html">Results</a>
+        <a href="news.html">News</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <nav class="desktop-nav">
+      <a href="index.html">Home</a>
+      <a href="predictions.html">Predictions</a>
+      <a href="results.html">Results</a>
+      <a href="news.html">News</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <h2>Predictions</h2>
+    <p>Explore our expert football match predictions for upcoming games.</p>
+
+    <div class="game">
+      <h3>Arsenal vs Chelsea</h3>
+      <p>Prediction: Arsenal Win</p>
+    </div>
+    <div class="game">
+      <h3>Real Madrid vs Barcelona</h3>
+      <p>Prediction: Draw</p>
+    </div>
+    <div class="game">
+      <h3>Manchester City vs Liverpool</h3>
+      <p>Prediction: Over 2.5 Goals</p>
+    </div>
+    <div class="game">
+      <h3>PSG vs Marseille</h3>
+      <p>Prediction: PSG Win</p>
+    </div>
+    <div class="game">
+      <h3>Bayern vs Dortmund</h3>
+      <p>Prediction: Both Teams to Score</p>
+    </div>
+  </main>
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+    toggleBtn.addEventListener('click', () => {
+      menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    });
+  </script>
+</body>
+</html>

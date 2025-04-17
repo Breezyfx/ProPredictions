@@ -68,6 +68,7 @@
     }
     #mobile-menu a:hover {
       background: #2e3b90;
+      transition: background-color 0.3s ease;
     }
     @media screen and (max-width: 768px) {
       .mobile-nav {
@@ -90,6 +91,7 @@
     }
     .desktop-nav a:hover {
       background-color: #2e3b90;
+      transition: background-color 0.3s ease;
     }
     main {
       padding: 1rem;
@@ -100,6 +102,10 @@
       padding: 1rem;
       border-radius: 5px;
       box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      transition: box-shadow 0.3s ease;
+    }
+    .game:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
     .reason {
       margin-top: 0.5rem;
@@ -114,6 +120,7 @@
       color: white;
       text-decoration: none;
       border-radius: 4px;
+      transition: background-color 0.3s ease;
     }
     .back-btn:hover {
       background-color: #2e3b90;
@@ -182,19 +189,9 @@
   <footer style="background-color:#1e2a78; color:white; text-align:center; padding:1rem;">
     <p>&copy; 2025 FootyPredict. All rights reserved.</p>
     <div class="footer-links">
-      <a href="privacy.html">Privacy Policy</a> | 
-      <a href="disclaimer.html">Disclaimer</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
     </div>
   </footer>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const toggleBtn = document.getElementById('menu-toggle');
-      const menu = document.getElementById('mobile-menu');
-      toggleBtn.addEventListener('click', () => {
-        const isVisible = menu.style.display === 'flex';
-        menu.style.display = isVisible ? 'none' : 'flex';
-      });
-    });
-  </script>
 </body>
 </html>

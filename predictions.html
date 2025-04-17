@@ -11,12 +11,12 @@
   <meta name="author" content="FootyPredict Team">
   <meta property="og:title" content="Predictions - FootyPredict">
   <meta property="og:description" content="Explore expert football match predictions for upcoming games at FootyPredict.">
-  <meta property="og:image" content="your-image-url.jpg"> <!-- Replace with actual image URL -->
+  <meta property="og:image" content="your-image-url.jpg">
   <meta property="og:url" content="https://propredict.fun/predictions.html">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Predictions - FootyPredict">
   <meta name="twitter:description" content="Explore expert football match predictions for upcoming games at FootyPredict.">
-  <meta name="twitter:image" content="your-image-url.jpg"> <!-- Replace with actual image URL -->
+  <meta name="twitter:image" content="your-image-url.jpg">
 
   <!-- Other SEO Tags -->
   <link rel="canonical" href="https://propredict.fun/predictions.html">
@@ -101,6 +101,28 @@
       border-radius: 5px;
       box-shadow: 0 0 5px rgba(0,0,0,0.1);
     }
+    .reason {
+      margin-top: 0.5rem;
+      font-style: italic;
+      color: #555;
+    }
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #1e2a78;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+    .back-btn:hover {
+      background-color: #2e3b90;
+    }
+    .footer-links a {
+      color: white;
+      text-decoration: underline;
+      margin: 0 0.5rem;
+    }
   </style>
 </head>
 <body>
@@ -127,35 +149,51 @@
     </nav>
   </header>
   <main>
+    <a class="back-btn" href="javascript:history.back()">&larr; Go Back</a>
     <h2>Predictions</h2>
     <p>Explore our expert football match predictions for upcoming games.</p>
 
     <div class="game">
       <h3>Arsenal vs Chelsea</h3>
       <p>Prediction: Arsenal Win</p>
+      <p class="reason">Reason: Arsenal has won 4 of their last 5 home games, while Chelsea struggles away.</p>
     </div>
     <div class="game">
       <h3>Real Madrid vs Barcelona</h3>
       <p>Prediction: Draw</p>
+      <p class="reason">Reason: El Clasico often ends level, and both teams are evenly matched this season.</p>
     </div>
     <div class="game">
       <h3>Manchester City vs Liverpool</h3>
       <p>Prediction: Over 2.5 Goals</p>
+      <p class="reason">Reason: Both teams have high-scoring offenses and leaky defenses in recent fixtures.</p>
     </div>
     <div class="game">
       <h3>PSG vs Marseille</h3>
       <p>Prediction: PSG Win</p>
+      <p class="reason">Reason: PSG is dominant at home and has a full squad available.</p>
     </div>
     <div class="game">
       <h3>Bayern vs Dortmund</h3>
       <p>Prediction: Both Teams to Score</p>
+      <p class="reason">Reason: Both teams average over 1.8 goals per game and often score in derbies.</p>
     </div>
   </main>
+  <footer style="background-color:#1e2a78; color:white; text-align:center; padding:1rem;">
+    <p>&copy; 2025 FootyPredict. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a> | 
+      <a href="disclaimer.html">Disclaimer</a>
+    </div>
+  </footer>
   <script>
-    const toggleBtn = document.getElementById('menu-toggle');
-    const menu = document.getElementById('mobile-menu');
-    toggleBtn.addEventListener('click', () => {
-      menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggleBtn = document.getElementById('menu-toggle');
+      const menu = document.getElementById('mobile-menu');
+      toggleBtn.addEventListener('click', () => {
+        const isVisible = menu.style.display === 'flex';
+        menu.style.display = isVisible ? 'none' : 'flex';
+      });
     });
   </script>
 </body>

@@ -1,206 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Predictions - ProPredict</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictions - ProPredict</title>
 
-  <!-- Meta Tags for SEO -->
-  <meta name="description" content="Explore expert football match predictions for upcoming games at ProPredict. Get accurate predictions for major football leagues including the Premier League, La Liga, and more.">
-  <meta name="keywords" content="football predictions, soccer predictions, Premier League, La Liga, football news, sports predictions, ProPredict">
-  <meta name="author" content="ProPredict Team">
-  <meta property="og:title" content="Predictions - ProPredict">
-  <meta property="og:description" content="Explore expert football match predictions for upcoming games at ProPredict.">
-  <meta property="og:image" content="i.imgur.com/xRvYerl.png">
-  <meta property="og:url" content="https://propredict.fun/predictions.html">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Predictions - ProPredict">
-  <meta name="twitter:description" content="Explore expert football match predictions for upcoming games at ProPredict.">
-  <meta name="twitter:image" content="https://i.imgur.com/xRvYerl.png">
+    <meta name="description" content="Explore expert football match predictions for upcoming games at ProPredict. Get accurate predictions for major football leagues including the Premier League, La Liga, and more.">
+    <meta name="keywords" content="football predictions, soccer predictions, Premier League, La Liga, football news, sports predictions, ProPredict">
+    <meta name="author" content="ProPredict Team">
+    <meta property="og:title" content="Predictions - ProPredict">
+    <meta property="og:description" content="Explore expert football match predictions for upcoming games at ProPredict.">
+    <meta property="og:image" content="i.imgur.com/xRvYerl.png">
+    <meta property="og:url" content="https://propredict.fun/predictions.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Predictions - ProPredict">
+    <meta name="twitter:description" content="Explore expert football match predictions for upcoming games at ProPredict.">
+    <meta name="twitter:image" content="https://i.imgur.com/xRvYerl.png">
 
-  <!-- Other SEO Tags -->
-  <link rel="canonical" href="https://propredict.fun/predictions.html">
+    <link rel="canonical" href="https://propredict.fun/predictions.html">
 
-  <!-- Favicon -->
- <link rel="icon" href="https://propredict.fun/images/favicon.png" type="image/png">
+    <link rel="icon" href="https://propredict.fun/images/favicon.png" type="image/png">
 
-  <!-- CSS for Styling -->
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-    }
-    header {
-      background-color: #1e2a78;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
-    .mobile-nav {
-      display: none;
-      position: relative;
-    }
-    #menu-toggle {
-      background: #1e2a78;
-      color: white;
-      font-size: 24px;
-      border: none;
-      padding: 0.5rem 1rem;
-      cursor: pointer;
-    }
-    #mobile-menu {
-      display: none;
-      flex-direction: column;
-      background: #1e2a78;
-      position: absolute;
-      top: 3rem;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-    }
-    #mobile-menu a {
-      color: white;
-      padding: 1rem;
-      text-decoration: none;
-      border-bottom: 1px solid rgba(255,255,255,0.2);
-    }
-    #mobile-menu a:hover {
-      background: #2e3b90;
-      transition: background-color 0.3s ease;
-    }
-    @media screen and (max-width: 768px) {
-      .mobile-nav {
-        display: block;
-      }
-      .desktop-nav {
-        display: none;
-      }
-    }
-    .desktop-nav {
-      display: flex;
-      justify-content: center;
-      background: #1e2a78;
-    }
-    .desktop-nav a {
-      color: white;
-      padding: 1rem;
-      text-decoration: none;
-      display: inline-block;
-    }
-    .desktop-nav a:hover {
-      background-color: #2e3b90;
-      transition: background-color 0.3s ease;
-    }
-    main {
-      padding: 1rem;
-    }
-    .game {
-      background: #d0f0ff; /* light blue */
-      margin: 1rem 0;
-      padding: 1rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: box-shadow 0.3s ease, transform 0.3s ease;
-    }
-    .game:hover {
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-      transform: translateY(-5px); /* Slight lift effect */
-    }
-    .game h3 {
-      margin-top: 0;
-      font-size: 1.25rem;
-      color: #1e2a78;
-    }
-    .game p {
-      color: #333;
-    }
-    .reason {
-      margin-top: 0.5rem;
-      font-style: italic;
-      color: #555;
-    }
-    .back-btn {
-      display: inline-block;
-      margin-bottom: 1rem;
-      padding: 0.5rem 1rem;
-      background-color: #1e2a78;
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
-      transition: background-color 0.3s ease;
-    }
-    .back-btn:hover {
-      background-color: #2e3b90;
-    }
-    .footer-links a {
-      color: white;
-      text-decoration: underline;
-      margin: 0 0.5rem;
-    }
-  </style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #1e2a78;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        .mobile-nav {
+            display: none;
+            position: relative;
+        }
+        #menu-toggle {
+            background: #1e2a78;
+            color: white;
+            font-size: 24px;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+        #mobile-menu {
+            display: none;
+            flex-direction: column;
+            background: #1e2a78;
+            position: absolute;
+            top: 3rem;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        #mobile-menu a {
+            color: white;
+            padding: 1rem;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        #mobile-menu a:hover {
+            background: #2e3b90;
+            transition: background-color 0.3s ease;
+        }
+        @media screen and (max-width: 768px) {
+            .mobile-nav {
+                display: block;
+            }
+            .desktop-nav {
+                display: none;
+            }
+        }
+        .desktop-nav {
+            display: flex;
+            justify-content: center;
+            background: #1e2a78;
+        }
+        .desktop-nav a {
+            color: white;
+            padding: 1rem;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .desktop-nav a:hover {
+            background-color: #2e3b90;
+            transition: background-color 0.3s ease;
+        }
+        main {
+            padding: 1rem;
+        }
+        .game {
+            background: #d0f0ff; /* light blue */
+            margin: 1rem 0;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+        .game:hover {
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px); /* Slight lift effect */
+        }
+        .game h3 {
+            margin-top: 0;
+            font-size: 1.25rem;
+            color: #1e2a78;
+        }
+        .game p {
+            color: #333;
+            margin-bottom: 0.2rem; /* Reduced margin for better spacing */
+        }
+        .reason {
+            margin-top: 0.5rem;
+            font-style: italic;
+            color: #555;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 1rem;
+            padding: 0.5rem 1rem;
+            background-color: #1e2a78;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        .back-btn:hover {
+            background-color: #2e3b90;
+        }
+        .footer-links a {
+            color: white;
+            text-decoration: underline;
+            margin: 0 0.5rem;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>ProPredict</h1>
-    <div class="mobile-nav">
-      <button id="menu-toggle">&#9776;</button>
-      <div id="mobile-menu">
-        <a href="index.html">Home</a>
-        <a href="predictions.html">Predictions</a>
-        <a href="results.html">Results</a>
-        <a href="news.html">News</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </div>
-    <nav class="desktop-nav">
-      <a href="index.html">Home</a>
-      <a href="predictions.html">Predictions</a>
-      <a href="results.html">Results</a>
-      <a href="news.html">News</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-  <main>
-    <a class="back-btn" href="javascript:history.back()">&larr; Go Back</a>
-    <h2>Predictions</h2>
-    <p>Explore our expert football match predictions for upcoming games.</p>
+    <header>
+        <h1>ProPredict</h1>
+        <div class="mobile-nav">
+            <button id="menu-toggle">&#9776;</button>
+            <div id="mobile-menu">
+                <a href="index.html">Home</a>
+                <a href="predictions.html">Predictions</a>
+                <a href="results.html">Results</a>
+                <a href="news.html">News</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        <nav class="desktop-nav">
+            <a href="index.html">Home</a>
+            <a href="predictions.html">Predictions</a>
+            <a href="results.html">Results</a>
+            <a href="news.html">News</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <a class="back-btn" href="javascript:history.back()">&larr; Go Back</a>
+        <h2>Predictions</h2>
+        <p>Explore our expert football match predictions for upcoming games.</p>
 
-    <div class="game">
-      <h3>Arsenal vs Chelsea</h3>
-      <p>Prediction: Arsenal Win</p>
-      <p class="reason">Reason: Arsenal has won 4 of their last 5 home games, while Chelsea struggles away.</p>
-    </div>
-    <div class="game">
-      <h3>Real Madrid vs Barcelona</h3>
-      <p>Prediction: Draw</p>
-      <p class="reason">Reason: El Clasico often ends level, and both teams are evenly matched this season.</p>
-    </div>
-    <div class="game">
-      <h3>Manchester City vs Liverpool</h3>
-      <p>Prediction: Over 2.5 Goals</p>
-      <p class="reason">Reason: Both teams have high-scoring offenses and leaky defenses in recent fixtures.</p>
-    </div>
-    <div class="game">
-      <h3>PSG vs Marseille</h3>
-      <p>Prediction: PSG Win</p>
-      <p class="reason">Reason: PSG is dominant at home and has a full squad available.</p>
-    </div>
-    <div class="game">
-      <h3>Bayern vs Dortmund</h3>
-      <p>Prediction: Both Teams to Score</p>
-      <p class="reason">Reason: Both teams average over 1.8 goals per game and often score in derbies.</p>
-    </div>
-  </main>
-  <footer style="background-color:#1e2a78; color:white; text-align:center; padding:1rem;">
-    <p>&copy; 2025 ProPredict. All rights reserved.</p>
-    <div class="footer-links">
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms of Use</a>
-    </div>
-  </footer>
+        <h3>🏴‍☠️ Premier League Predictions</h3>
+        <div class="game">
+            <h3>Aston Villa vs Newcastle</h3>
+            <p>🔮 Prediction: Over 2.5 Goals</p>
+            <p>📊 Correct Score: 2-2</p>
+            <p class="reason">Reason: Both teams are high scorers and shaky defensively.</p>
+        </div>
+        <div class="game">
+            <h3>Brentford vs Brighton</h3>
+            <p>🔮 Prediction: BTTS (Both Teams To Score)</p>
+            <p>📊 Correct Score: 1-1</p>
+            <p class="reason">Reason: Even matchup, both sides usually get a goal.</p>
+        </div>
+        <div class="game">
+            <h3>Crystal Palace vs Bournemouth</h3>
+            <p>🔮 Prediction: Draw</p>
+            <p>📊 Correct Score: 1-1</p>
+            <p class="reason">Reason: Balanced sides, neither is dominant right now.</p>
+        </div>
+        <div class="game">
+            <h3>Everton vs Man City</h3>
+            <p>🔮 Prediction: Man City Win & Over 2.5</p>
+            <p>📊 Correct Score: 1-3</p>
+            <p class="reason">Reason: City should dominate but Everton may sneak a goal.</p>
+        </div>
+        <div class="game">
+            <h3>Fulham vs Chelsea</h3>
+            <p>🔮 Prediction: Chelsea to Win</p>
+            <p>📊 Correct Score: 0-2</p>
+            <p class="reason">Reason: Fulham is poor in big matches, Chelsea will control the game.</p>
+        </div>
+        <div class="game">
+            <h3>Ipswich vs Arsenal</h3>
+            <p>🔮 Prediction: Arsenal Win to Nil</p>
+            <p>📊 Correct Score: 0-2</p>
+            <p class="reason">Reason: Arsenal should be too much, strong at the back.</p>
+        </div>
+        <div class="game">
+            <h3>Leicester vs Liverpool</h3>
+            <p>🔮 Prediction: Liverpool Win & BTTS</p>
+            <p>📊 Correct Score: 1-3</p>
+            <p class="reason">Reason: Leicester can score, but Liverpool will likely overpower them.</p>
+        </div>
+        <div class="game">
+            <h3>Man United vs Wolves</h3>
+            <p>🔮 Prediction: United Win</p>
+            <p>📊 Correct Score: 2-1</p>
+            <p class="reason">Reason: United usually edges these games at home.</p>
+        </div>
+        <div class="game">
+            <h3>Tottenham vs Forest</h3>
+            <p>🔮 Prediction: Spurs Win & Over 2.5</p>
+            <p>📊 Correct Score: 3-1</p>
+            <p class="reason">Reason: Spurs attack will be too fast for Forest's defense.</p>
+        </div>
+        <div class="game">
+            <h3>West Ham vs Southampton</h3>
+            <p>🔮 Prediction: BTTS</p>
+            <p>📊 Correct Score: 2-2</p>
+            <p class="reason">Reason: Both sides have leaky defenses and decent attacks.</p>
+        </div>
+
+        <h3>🇮🇹 Serie A Predictions</h3>
+        <div class="game">
+            <h3>Lecce vs Como</h3>
+            <p>🔮 Prediction: Lecce Win or Draw</p>
+            <p>📊 Correct Score: 1-0</p>
+            <p class="reason">Reason: Lecce should edge it in a low-scoring game.</p>
+        </div>
+        <div class="game">
+            <h3>Monza vs Napoli</h3>
+            <p>🔮 Prediction: Napoli Win</p>
+            <p>📊 Correct Score: 1-2</p>
+            <p class="reason">Reason: Napoli to steal it late against a relaxed Monza side.</p>
+        </div>
+        <div class="game">
+            <h3>Roma vs Verona</h3>
+            <p>🔮 Prediction: Roma Win & Under 3.5</p>
+            <p>📊 Correct Score: 2-0</p>
+            <p class="reason">Reason: Roma is organized and clinical at home.</p>
+        </div>
+
+        <h3>🇩🇪 Bundesliga Predictions</h3>
+        <div class="game">
+            <h3>Heidenheim vs Bayern Munich</h3>
+            <p>🔮 Prediction: Bayern Win & Over 2.5</p>
+            <p>📊 Correct Score: 1-4</p>
+            <p class="reason">Reason: Bayern will bounce back hard, especially after setbacks.</p>
+        </div>
+        <div class="game">
+            <h3>RB Leipzig vs Holstein Kiel</h3>
+            <p>🔮 Prediction: Leipzig Win to Nil</p>
+            <p>📊 Correct Score: 3-0</p>
+            <p class="reason">Reason: Total dominance expected at home.</p>
+        </div>
+        <div class="game">
+            <h3>Freiburg vs Hoffenheim</h3>
+            <p>🔮 Prediction: Over 2.5 Goals</p>
+            <p>📊 Correct Score: 2-2</p>
+            <p class="reason">Reason: Both sides love open football.</p>
+        </div>
+        <div class="game">
+            <h3>Mainz vs Wolfsburg</h3>
+            <p>🔮 Prediction: Draw</p>
+            <p>📊 Correct Score: 1-1</p>
+            <p class="reason">Reason: Two out-of-form sides cancel each other out.</p>
+        </div>
+        <div class="game">
+            <h3>Werder Bremen vs Bochum</h3>
+            <p>🔮 Prediction: Werder Win</p>
+            <p>📊 Correct Score: 2-1</p>
+            <p class="reason">Reason: Better team at home, but Bochum might threaten.</p>
+        </div>
+        <div class="game">
+            <h3>Union Berlin vs Stuttgart</h3>
+            <p>🔮 Prediction: Stuttgart Win</p>
+            <p>📊 Correct Score: 0-2</p>
+            <p class="reason">Reason: Stuttgart flying, Union struggling for form.</p>
+        </div>
+    </main>
+    <footer style="background-color:#1e2a78; color:white; text-align:center; padding:1rem;">
+        <p>&copy; 2025 ProPredict. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Use</a>
+        </div>
+    </footer>
 </body>
 </html>
